@@ -28,7 +28,7 @@ body {
     max-width: 90%;
     height: 450px;
     object-fit: contain;
-    margin: 190px 0;
+    margin: 35px 0 45px;
 }
 
 .textapre,
@@ -39,6 +39,17 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+
+/* Texto de abertura: fica no topo, antes da imagem */
+body>.textapre:first-child {
+    padding: 260px 25px 0;
+}
+
+body>.textapre:first-child p {
+    max-width: 1050px;
+    margin: 8px auto;
 }
 
 .textapre p {
@@ -226,12 +237,24 @@ body {
         background: url('imagem/fundo400_672.png') center top / cover no-repeat;
     }
 
+    /* Abertura no celular */
+    body>.textapre:first-child {
+        padding: 165px 18px 0;
+    }
+
+    body>.textapre:first-child p {
+        font-size: 19px;
+        line-height: 1.35;
+        margin: 5px auto;
+    }
+
+    /* Imagem logo depois do texto inicial */
     .top img {
         width: auto;
         max-width: 88%;
-        height: 270px;
-        margin: 70px 0 45px;
-        padding-top: 20px;
+        height: 250px;
+        margin: 28px 0 35px;
+        padding-top: 0;
     }
 
     .textapre {
@@ -309,10 +332,18 @@ body {
         background: url('imagem/fundo1834_400.png') center top / cover no-repeat;
     }
 
+    body>.textapre:first-child {
+        padding: 145px 15px 0;
+    }
+
+    body>.textapre:first-child p {
+        font-size: 17px;
+    }
+
     .top img {
         max-width: 92%;
-        height: 235px;
-        margin-top: 55px;
+        height: 220px;
+        margin: 22px 0 30px;
     }
 
     .textname h1 {
