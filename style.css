@@ -144,6 +144,23 @@ body>.textapre:first-child p {
     padding: 15px 10px;
     border-radius: 15px;
     margin-top: 15px;
+    display: block;
+    transition: transform 0.3s ease, background-color 0.3s ease,
+        color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover animado dos botões */
+.btn:hover {
+    transform: translateY(-6px) scale(1.03);
+    background-color: #c65038;
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(198, 80, 56, 0.30);
+}
+
+/* Efeito suave ao clicar */
+.btn:active {
+    transform: translateY(-2px) scale(0.98);
 }
 
 @media (max-width: 1742px) {
@@ -314,6 +331,10 @@ body>.textapre:first-child p {
         width: 100%;
         padding: 12px 10px;
         margin-top: 8px;
+    }
+
+    .btn:hover {
+        transform: translateY(-4px) scale(1.02);
     }
 
     .confirm {
