@@ -223,3 +223,7 @@ body {
         font-size: 14px;
     }
 }
+/* Botão de retorno para a página inicial */
+.voltar-inicio { position: fixed; top: 18px; left: 18px; z-index: 9999; color: #c65038; background: rgba(255,250,245,.94); border: 2px solid #c65038; border-radius: 14px; padding: 10px 18px; text-decoration: none; font-size: 17px; font-family: Georgia, "Times New Roman", serif; box-shadow: 0 4px 12px rgba(0,0,0,.10); transition: .3s ease; }
+.voltar-inicio:hover { background:#c65038; color:#fff; transform:translateY(-2px); }
+@media(max-width:583px){ .voltar-inicio{top:10px;left:10px;font-size:15px;padding:8px 13px;} }
