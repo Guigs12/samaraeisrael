@@ -36,6 +36,34 @@
         <p>Venha celebrar nosso amor e fazer parte da nossa história</p>
     </section>
 
+    <section class="countdown">
+        <p class="countdown-title">Faltam apenas...</p>
+
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <span id="days">00</span>
+                <small>dias</small>
+            </div>
+
+            <div class="countdown-item">
+                <span id="hours">00</span>
+                <small>horas</small>
+            </div>
+
+            <div class="countdown-item">
+                <span id="minutes">00</span>
+                <small>minutos</small>
+            </div>
+
+            <div class="countdown-item">
+                <span id="seconds">00</span>
+                <small>segundos</small>
+            </div>
+        </div>
+
+        <p id="countdown-message" class="countdown-message"></p>
+    </section>
+
     <section class="buttonicon">
         <section class="icons">
             <img class="imgend" src="imagem/pino-de-localizacao.png" alt="">
@@ -66,5 +94,45 @@
     <section class="confirm">
         <p>Confirmar presença até dia 30/10/2026!</p>
     </section>
+
+    <script>
+        // Data e horário do casamento: 28/11/2026 às 19:00.
+        // O navegador usa o horário local do dispositivo.
+        const weddingDate = new Date(2026, 10, 28, 19, 0, 0);
+
+        function updateCountdown() {
+            const now = new Date();
+            const difference = weddingDate.getTime() - now.getTime();
+
+            const daysElement = document.getElementById("days");
+            const hoursElement = document.getElementById("hours");
+            const minutesElement = document.getElementById("minutes");
+            const secondsElement = document.getElementById("seconds");
+            const messageElement = document.getElementById("countdown-message");
+
+            if (difference <= 0) {
+                daysElement.textContent = "00";
+                hoursElement.textContent = "00";
+                minutesElement.textContent = "00";
+                secondsElement.textContent = "00";
+                messageElement.textContent = "Chegou o grande dia! ♥";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((difference / (1000 * 60)) % 60);
+            const seconds = Math.floor((difference / 1000) % 60);
+
+            daysElement.textContent = String(days).padStart(2, "0");
+            hoursElement.textContent = String(hours).padStart(2, "0");
+            minutesElement.textContent = String(minutes).padStart(2, "0");
+            secondsElement.textContent = String(seconds).padStart(2, "0");
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+
 </body>
 </html>
