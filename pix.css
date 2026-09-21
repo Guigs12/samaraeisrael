@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    /* Mesmo fundo do site principal */
+    background: url('imagem/fundo.jpeg') center top / cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.pix-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pix-card {
+    width: min(720px, 92%);
+    padding: 55px 50px;
+
+    text-align: center;
+
+    background: rgba(255, 250, 245, 0.88);
+    border: 2px solid #c65038;
+    border-radius: 25px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.pix-card h1 {
+    color: #c65038;
+    font-family: Nome, Georgia, serif;
+    font-size: 54px;
+    font-weight: normal;
+    margin-bottom: 35px;
+}
+
+.pix-card p {
+    color: #c65038;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.pix-key {
+    width: 100%;
+    margin: 35px auto 20px;
+    padding: 18px 15px;
+
+    border: 2px solid #c65038;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    word-break: break-word;
+}
+
+.pix-key span {
+    color: #c65038;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.pix-button {
+    border: 2px solid #c65038;
+    border-radius: 15px;
+
+    padding: 15px 28px;
+
+    background: transparent;
+    color: #c65038;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.pix-button:hover {
+    background: #c65038;
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(198, 80, 56, 0.30);
+}
+
+.pix-button:active {
+    transform: translateY(-1px);
+}
+
+.mensagem {
+    min-height: 25px;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    font-size: 17px !important;
+    font-weight: bold;
+}
+
+.voltar {
+    display: inline-block;
+    margin-top: 15px;
+
+    color: #c65038;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+/* Mantém o carregamento da fonte usada no site */
+@font-face {
+    font-family: 'Nome';
+    src: url('/font/parfumerie/ParfumerieScriptRegular.otf') format('opentype'),
+         url('/font/parfumerie/ParfumerieScriptText.otf') format('truetype');
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+    body {
+        background: url('imagem/fundo1834_800.png') center top / cover no-repeat;
+    }
+
+    .pix-card {
+        padding: 45px 35px;
+    }
+
+    .pix-card h1 {
+        font-size: 45px;
+    }
+
+    .pix-card p {
+        font-size: 21px;
+    }
+}
+
+/* Celular */
+@media (max-width: 583px) {
+    body {
+        background: url('imagem/fundo400_672.png') center top / cover no-repeat;
+        padding: 20px 12px;
+    }
+
+    .pix-container {
+        min-height: calc(100vh - 40px);
+    }
+
+    .pix-card {
+        width: 100%;
+        padding: 35px 20px;
+        border-radius: 20px;
+    }
+
+    .pix-card h1 {
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+
+    .pix-card p {
+        font-size: 18px;
+        line-height: 1.45;
+        margin-bottom: 18px;
+    }
+
+    .pix-key {
+        margin: 28px auto 15px;
+        padding: 15px 10px;
+    }
+
+    .pix-key span {
+        font-size: 16px;
+    }
+
+    .pix-button {
+        width: 100%;
+        font-size: 18px;
+        padding: 13px 10px;
+    }
+
+    .voltar {
+        font-size: 17px;
+    }
+}
+
+/* Celulares menores */
+@media (max-width: 400px) {
+    body {
+        background: url('imagem/fundo1834_400.png') center top / cover no-repeat;
+    }
+
+    .pix-card {
+        padding: 30px 16px;
+    }
+
+    .pix-card h1 {
+        font-size: 34px;
+    }
+
+    .pix-card p {
+        font-size: 17px;
+    }
+
+    .pix-key span {
+        font-size: 14px;
+    }
+}

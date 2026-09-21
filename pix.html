@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente PIX - Samara & Israel</title>
+    <link rel="stylesheet" href="pix.css">
+</head>
+<body>
+
+    <main class="pix-container">
+        <section class="pix-card">
+            <h1>Um presente de coração</h1>
+
+            <p>
+                Sua presença em nosso casamento já é o melhor presente
+                que poderíamos receber!
+            </p>
+
+            <p>
+                Caso queira nos presentear com pix, pode usar a chave
+                que está logo abaixo.
+            </p>
+
+            <div class="pix-key">
+                <span id="pixKey">samarasilva_machado@hotmail.com</span>
+            </div>
+
+            <button class="pix-button" onclick="copiarPix()">
+                Copiar chave PIX
+            </button>
+
+            <p id="mensagem" class="mensagem"></p>
+
+            <a class="voltar" href="index.html">Voltar</a>
+        </section>
+    </main>
+
+    <script>
+        function copiarPix() {
+            const chave = "samarasilva_machado@hotmail.com";
+
+            navigator.clipboard.writeText(chave).then(() => {
+                document.getElementById("mensagem").textContent =
+                    "Chave PIX copiada!";
+            }).catch(() => {
+                document.getElementById("mensagem").textContent =
+                    "Não foi possível copiar automaticamente. Selecione a chave acima.";
+            });
+        }
+    </script>
+
+</body>
+</html>
