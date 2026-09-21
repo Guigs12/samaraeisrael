@@ -10,6 +10,12 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Versiculo';
+    src: url('./font/simple_handmade_2/SimpleHandmade.otf') format('opentype');
+    font-style: normal;
+}
 html {
     width: 100%;
     overflow-x: hidden;
@@ -58,6 +64,10 @@ body>.textapre:first-child p {
     margin: 8px auto;
 }
 
+.ver {
+    font-family: versiculo;
+}
+
 .textapre p {
     color: #c65038;
     font-size: 48px;
@@ -91,6 +101,7 @@ body>.textapre:first-child p {
 
 .textinfo p {
     color: #c65038;
+    font-family: versiculo;
     font-size: 48px;
     line-height: 1.3;
     text-align: center;
@@ -135,6 +146,7 @@ body>.textapre:first-child p {
 
 .data-casamento strong {
     display: block;
+    font-family: versiculo;
     font-size: clamp(42px, 4vw, 68px);
     line-height: 1.05;
     font-weight: 500;
@@ -142,6 +154,7 @@ body>.textapre:first-child p {
 }
 
 .data-hora {
+    font-family: versiculo;
     font-size: 38px;
     font-weight: bold;
     line-height: 1.1;
@@ -159,6 +172,7 @@ body>.textapre:first-child p {
 }
 
 .convite-final {
+    font-weight: bold;
     font-size: 38px !important;
     margin-top: 5px !important;
 }
