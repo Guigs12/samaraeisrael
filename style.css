@@ -68,6 +68,10 @@ body>.textapre:first-child p {
     font-family: versiculo;
 }
 
+.textapre {
+    color: #c65038;
+}
+
 .textapre p {
     color: #c65038;
     font-size: 48px;
@@ -647,5 +651,763 @@ body>.textapre:first-child p {
 
     .countdown-title {
         font-size: 25px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Nome';
+    src: url('font/parfumerie/ParfumerieScriptRegular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Versiculo';
+    src: url('./font/simple_handmade_2/SimpleHandmade.otf') format('opentype');
+    font-style: normal;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: url('imagem/fundo.jpeg') center top / cover no-repeat;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.top img {
+    width: auto;
+    max-width: 90%;
+    height: 450px;
+    object-fit: contain;
+    margin: 35px 0 45px;
+}
+
+/* Container e imagem do casal */
+.casal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 20px;
+}
+
+.img-casal {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+}
+
+.textapre,
+.textinfo,
+.confirm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Texto de abertura: fica no topo, antes da imagem */
+body>.textapre:first-child {
+    padding: 260px 25px 0;
+}
+
+body>.textapre:first-child p {
+    max-width: 1050px;
+    margin: 8px auto;
+}
+
+.ver {
+    font-family: versiculo;
+}
+
+.textapre {
+    color: #c65038;
+}
+
+.textapre p {
+    color: #c65038;
+    font-size: 48px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 20px 15px;
+}
+
+.textname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.textname h1 {
+    color: #c65038;
+    font-family: Nome;
+    font-size: 220px;
+    font-weight: lighter;
+    line-height: 1;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.textinfo {
+    gap: 18px;
+    padding: 10px 25px 0;
+}
+
+.textinfo p {
+    color: #c65038;
+    font-family: versiculo;
+    font-size: 48px;
+    line-height: 1.3;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0;
+}
+
+.intro-casamento {
+    font-size: 42px !important;
+}
+
+.data-casamento {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin: 18px auto 12px;
+    padding: 28px 55px 25px;
+    text-align: center;
+    color: #c65038;
+}
+
+.data-casamento::before,
+.data-casamento::after {
+    content: "✦";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+}
+
+.data-casamento::before {
+    left: 5px;
+}
+
+.data-casamento::after {
+    right: 5px;
+}
+
+.data-legenda {
+    font-size: 25px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .85;
+}
+
+.data-casamento strong {
+    display: block;
+    font-family: versiculo;
+    font-size: clamp(42px, 4vw, 68px);
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.data-hora {
+    font-family: versiculo;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.data-local {
+    margin-top: 5px;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.frase-casamento {
+    font-size: 34px !important;
+    margin-top: 8px !important;
+}
+
+.convite-final {
+    font-weight: bold;
+    font-size: 38px !important;
+    margin-top: 5px !important;
+}
+
+.confirm {
+    margin-top: 40px;
+    padding: 0 20px 40px;
+}
+
+.confirm p {
+    color: #c65038;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.buttonicon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 35px;
+    width: 100%;
+    min-height: 250px;
+    height: auto;
+    padding: 80px 30px 20px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 220px;
+    padding-left: 0;
+    text-align: center;
+}
+
+.icons a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.icons p {
+    color: #e2725b;
+    font-size: 30px;
+    line-height: 1.2;
+    padding-top: 15px;
+}
+
+.icons img {
+    height: 60px;
+    width: auto;
+    max-width: 80px;
+    object-fit: contain;
+}
+
+.btn {
+    border: solid 2px #c65038;
+    padding: 15px 10px;
+    border-radius: 15px;
+    margin-top: 15px;
+    display: block;
+    transition: transform 0.3s ease, background-color 0.3s ease,
+        color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover animado dos botões */
+.btn:hover {
+    transform: translateY(-6px) scale(1.03);
+    background-color: #c65038;
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(198, 80, 56, 0.30);
+}
+
+/* Efeito suave ao clicar */
+.btn:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+/* Contagem regressiva */
+.countdown {
+    width: min(1200px, 90%);
+    margin: 45px auto 20px;
+    padding: 30px 20px 40px;
+    text-align: center;
+}
+
+.countdown-title {
+    color: #c65038;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 28px;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.countdown-item {
+    min-width: 150px;
+    padding: 18px 22px;
+    border: 2px solid #c65038;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-item span {
+    color: #c65038;
+    font-size: 52px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.countdown-item small {
+    color: #c65038;
+    font-size: 22px;
+    margin-top: 8px;
+}
+
+.countdown-message {
+    color: #c65038;
+    font-size: 34px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+/* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
+
+@media (max-width: 1742px) {
+    .textname h1 {
+        font-size: 75px;
+    }
+
+    .textapre p,
+    .textinfo p {
+        font-size: 40px;
+    }
+
+    .intro-casamento {
+        font-size: 36px !important;
+    }
+
+    .data-casamento strong {
+        font-size: 52px;
+    }
+
+    .confirm p {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .textname h1 {
+        font-size: 60px;
+    }
+
+    .textapre p,
+    .textinfo p {
+        font-size: 30px;
+    }
+
+    .intro-casamento {
+        font-size: 30px !important;
+    }
+
+    .data-casamento strong {
+        font-size: 44px;
+    }
+
+    .data-hora {
+        font-size: 30px;
+    }
+
+    .confirm p {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1115px) {
+    .textname {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .textname h1 {
+        font-family: 'Nome', cursive;
+        font-size: clamp(54px, 9vw, 90px);
+        line-height: .95;
+        width: 100%;
+        overflow-wrap: normal;
+        word-break: keep-all;
+    }
+
+    .textapre p,
+    .textinfo p {
+        font-size: 25px;
+    }
+
+    .textinfo p {
+        max-width: 850px;
+    }
+
+    .confirm p {
+        font-size: 25px;
+    }
+
+    .buttonicon {
+        gap: 20px;
+    }
+
+    .icons {
+        width: 190px;
+    }
+
+    .icons p {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 928px) {
+    .textinfo p {
+        width: 85%;
+    }
+
+    .buttonicon {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        background: url('imagem/fundo1834_800.png') center top / cover no-repeat;
+    }
+
+    .top img {
+        max-width: 85%;
+    }
+
+    .img-casal {
+        max-width: 500px;
+    }
+
+    .textinfo p {
+        width: 90%;
+    }
+}
+
+@media (max-width: 583px) {
+    body {
+        background: url('imagem/fundo400_672.png') center top / cover no-repeat;
+    }
+
+    /* Abertura no celular */
+    body>.textapre:first-child {
+        padding: 165px 18px 0;
+    }
+
+    body>.textapre:first-child p {
+        font-size: 19px;
+        line-height: 1.35;
+        margin: 5px auto;
+    }
+
+    /* Imagem logo depois do texto inicial */
+    .top img {
+        width: auto;
+        max-width: 88%;
+        height: 250px;
+        margin: 28px 0 35px;
+        padding-top: 0;
+    }
+
+    .casal-container {
+        padding: 20px 15px;
+    }
+
+    .img-casal {
+        width: 90%;
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    .textapre {
+        padding: 0 15px;
+    }
+
+    .textapre p {
+        width: 100%;
+        font-size: 20px;
+        line-height: 1.35;
+        margin: 8px 0;
+    }
+
+    .textname {
+        width: 100%;
+        margin: 20px 0 28px;
+        overflow: visible;
+    }
+
+    .textname h1 {
+        font-family: 'Nome', cursive;
+        font-size: clamp(52px, 16vw, 78px);
+        font-weight: 400;
+        line-height: .9;
+        width: 100%;
+        margin: 5px 0;
+        white-space: nowrap;
+    }
+
+    .textinfo {
+        width: 100%;
+        padding: 0 15px;
+        gap: 12px;
+    }
+
+    .textinfo p {
+        width: 100%;
+        font-size: 19px;
+        line-height: 1.45;
+        margin: 0;
+    }
+
+    .intro-casamento {
+        font-size: 20px !important;
+    }
+
+    .data-casamento {
+        width: 100%;
+        margin: 10px auto 8px;
+        padding: 22px 28px 20px;
+        gap: 4px;
+    }
+
+    .data-casamento::before,
+    .data-casamento::after {
+        font-size: 17px;
+    }
+
+    .data-casamento::before {
+        left: 2px;
+    }
+
+    .data-casamento::after {
+        right: 2px;
+    }
+
+    .data-legenda {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .data-casamento strong {
+        font-size: clamp(27px, 8vw, 38px);
+        line-height: 1.08;
+    }
+
+    .data-hora {
+        font-size: 23px;
+    }
+
+    .data-local {
+        font-size: 19px;
+    }
+
+    .frase-casamento {
+        font-size: 18px !important;
+    }
+
+    .convite-final {
+        font-size: 20px !important;
+        margin-top: 2px !important;
+    }
+
+    .countdown {
+        width: 100%;
+        padding: 25px 15px 30px;
+        margin-top: 25px;
+    }
+
+    .countdown-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .countdown-container {
+        gap: 10px;
+    }
+
+    .countdown-item {
+        min-width: 125px;
+        padding: 14px 10px;
+        border-radius: 14px;
+    }
+
+    .countdown-item span {
+        font-size: 34px;
+    }
+
+    .countdown-item small {
+        font-size: 16px;
+        margin-top: 6px;
+    }
+
+    .countdown-message {
+        font-size: 23px;
+    }
+
+    .buttonicon {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 35px 15px 10px;
+        min-height: 0;
+    }
+
+    .icons {
+        width: min(300px, 90%);
+        padding-left: 0;
+    }
+
+    .icons img {
+        height: 50px;
+    }
+
+    .icons p {
+        font-size: 20px;
+        padding-top: 8px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 10px;
+        margin-top: 8px;
+    }
+
+    .btn:hover {
+        transform: translateY(-4px) scale(1.02);
+    }
+
+    .confirm {
+        margin-top: 25px;
+        padding: 0 20px 35px;
+    }
+
+    .confirm p {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        background: url('imagem/fundo1834_400.png') center top / cover no-repeat;
+    }
+
+    body>.textapre:first-child {
+        padding: 145px 15px 0;
+    }
+
+    body>.textapre:first-child p {
+        font-size: 17px;
+    }
+
+    .top img {
+        max-width: 92%;
+        height: 220px;
+        margin: 22px 0 30px;
+    }
+
+    .img-casal {
+        width: 95%;
+    }
+
+    .textname h1 {
+        font-family: 'Nome', cursive;
+        font-size: clamp(48px, 17vw, 65px);
+        white-space: nowrap;
+    }
+
+    .textapre p {
+        font-size: 18px;
+    }
+
+    .textinfo p,
+    .confirm p {
+        font-size: 17px;
+    }
+
+    .intro-casamento {
+        font-size: 18px !important;
+    }
+
+    .data-casamento {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .data-casamento strong {
+        font-size: clamp(24px, 8.5vw, 34px);
+    }
+
+    .data-hora {
+        font-size: 21px;
+    }
+
+    .data-local {
+        font-size: 17px;
+    }
+
+    .frase-casamento {
+        font-size: 17px !important;
+    }
+
+    .convite-final {
+        font-size: 18px !important;
+    }
+
+    .countdown-item {
+        min-width: 115px;
+        padding: 12px 8px;
+    }
+
+    .countdown-item span {
+        font-size: 30px;
+    }
+
+    .countdown-item small {
+        font-size: 14px;
+    }
+
+    .countdown-title {
+        font-size: 25px;
+    }
+
+    .icons {
+        width: min(280px, 92%);
+    }
+
+    .icons p {
+        font-size: 18px;
     }
 }
