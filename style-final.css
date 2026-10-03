@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: url("imagem/fundo.jpeg") center top / cover fixed no-repeat;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ================================
+   IMAGEM PRINCIPAL
+================================ */
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 20px 70px;
+}
+
+.top img {
+    display: block;
+    width: min(92vw, 680px);
+    height: auto;
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+}
+
+/* ================================
+   TEXTOS
+================================ */
+
+.textapre,
+.textinfo,
+.confirm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.textapre {
+    padding: 0 20px;
+}
+
+.textapre p {
+    color: #c65038;
+    font-size: clamp(22px, 3vw, 42px);
+    line-height: 1.35;
+    margin: 8px 0;
+}
+
+.textname {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 55px 0;
+}
+
+.textname h1 {
+    color: #c65038;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 0.95;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+.textinfo {
+    gap: 12px;
+    padding: 0 25px;
+}
+
+.textinfo p {
+    max-width: 1000px;
+    color: #c65038;
+    font-size: clamp(20px, 2.5vw, 36px);
+    line-height: 1.45;
+}
+
+/* ================================
+   BOTÕES / ÍCONES
+================================ */
+
+.buttonicon {
+    width: min(1200px, 95%);
+    margin: 65px auto 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    align-items: start;
+    justify-content: center;
+}
+
+.icons {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icons img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.icons a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.icons p {
+    color: #e2725b;
+    font-size: clamp(16px, 1.7vw, 25px);
+    line-height: 1.2;
+    margin-top: 14px;
+}
+
+.btn {
+    border: 1px solid #c65038;
+    padding: 12px 14px;
+    border-radius: 15px;
+    transition: 0.25s ease;
+}
+
+.btn:hover {
+    background: rgba(198, 80, 56, 0.10);
+    transform: translateY(-2px);
+}
+
+/* ================================
+   CONFIRMAÇÃO
+================================ */
+
+.confirm {
+    padding: 25px 20px 90px;
+}
+
+.confirm p {
+    color: #c65038;
+    font-size: clamp(20px, 2.5vw, 36px);
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* ================================
+   BOTÃO DE MÚSICA
+================================ */
+
+.music-button {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 9999;
+}
+
+#musicToggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 10px 17px;
+    border: 1px solid rgba(198, 80, 56, 0.35);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.94);
+    color: #c65038;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+#musicToggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.20);
+}
+
+#musicToggle:active {
+    transform: scale(0.97);
+}
+
+.music-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #c65038;
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.music-text {
+    white-space: nowrap;
+}
+
+#musicToggle.playing .music-icon {
+    animation: musicPulse 1s infinite ease-in-out;
+}
+
+#musicToggle.playing {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+@keyframes musicPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 800px) {
+    body {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+
+    .top {
+        padding: 55px 16px 45px;
+    }
+
+    .top img {
+        width: min(92vw, 560px);
+        max-height: none;
+    }
+
+    .buttonicon {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 18px;
+        margin-top: 50px;
+    }
+}
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 600px) {
+    .top {
+        padding: 35px 12px 35px;
+    }
+
+    .top img {
+        width: 94vw;
+        border-radius: 3px;
+    }
+
+    .textapre {
+        padding: 0 15px;
+    }
+
+    .textapre p {
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .textname {
+        margin: 40px 0;
+    }
+
+    .textname h1 {
+        font-size: 52px;
+        margin: 5px 0;
+    }
+
+    .textinfo {
+        padding: 0 18px;
+        gap: 10px;
+    }
+
+    .textinfo p {
+        font-size: 20px;
+        line-height: 1.45;
+    }
+
+    .buttonicon {
+        width: 94%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 12px;
+        margin-top: 45px;
+    }
+
+    .icons img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icons p {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 10px 8px;
+        border-radius: 12px;
+    }
+
+    .confirm {
+        padding: 35px 18px 90px;
+    }
+
+    .confirm p {
+        font-size: 20px;
+    }
+
+    .music-button {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    #musicToggle {
+        min-height: 48px;
+        padding: 8px 13px;
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .music-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 380px) {
+    .textname h1 {
+        font-size: 45px;
+    }
+
+    .textapre p,
+    .textinfo p,
+    .confirm p {
+        font-size: 18px;
+    }
+
+    .buttonicon {
+        gap: 20px 8px;
+    }
+
+    .icons p {
+        font-size: 14px;
+    }
+
+    .music-button {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .music-text {
+        font-size: 12px;
+    }
+}

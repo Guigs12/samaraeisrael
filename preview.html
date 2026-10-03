@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samara e Israel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="top">
+        <img src="casal.jpeg" alt="Samara e Israel">
+    </section>
+
+    <section class="textapre">
+        <p>Venha celebrar nosso amor e fazer parte da nossa história</p>
+        <p>Com a benção de Deus</p>
+    </section>
+
+    <section class="textname">
+        <h1>Samara</h1>
+        <h1>e</h1>
+        <h1>Israel</h1>
+    </section>
+
+    <section class="textinfo">
+        <p>Com alegria convidamos para a celebração do nosso casamento.</p>
+        <p>Que irá se realizar no dia 28 de novembro de 2026, às 19 horas, no Espaço Manu Festas.</p>
+    </section>
+
+    <section class="buttonicon">
+
+        <section class="icons">
+            <img src="imagem/pino-de-localizacao.png" alt="">
+            <a href="https://maps.app.goo.gl/bwCG3BhzzuJzWTLx5?g_st=aw" target="_blank" rel="noopener noreferrer">
+                <p class="btn">Local</p>
+            </a>
+        </section>
+
+        <section class="icons">
+            <img src="imagem/manual.png" alt="">
+            <a href="/convidados.html" target="_blank">
+                <p class="btn">Manual do Convidado</p>
+            </a>
+        </section>
+
+        <section class="icons">
+            <img src="imagem/confirme.png" alt="">
+            <a href="/confirmar.html" target="_blank">
+                <p class="btn">Confirmar presença</p>
+            </a>
+        </section>
+
+        <section class="icons">
+            <img src="imagem/lista.png" alt="">
+            <a href="/presentes.html" target="_blank">
+                <p class="btn">Lista de presentes</p>
+            </a>
+        </section>
+
+    </section>
+
+    <!-- Botão de música -->
+    <div class="music-button">
+        <button id="musicToggle" type="button" aria-label="Tocar música" aria-pressed="false">
+            <span class="music-icon" id="musicIcon">▶</span>
+            <span class="music-text" id="musicText">Tocar música</span>
+        </button>
+    </div>
+
+    <!-- Coloque o arquivo da música com este nome na mesma pasta do HTML -->
+    <audio id="weddingMusic" preload="metadata" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <section class="confirm">
+        <p>Confirmar presença até dia 30/10/2026!</p>
+    </section>
+
+    <script>
+        const music = document.getElementById("weddingMusic");
+        const musicToggle = document.getElementById("musicToggle");
+        const musicIcon = document.getElementById("musicIcon");
+        const musicText = document.getElementById("musicText");
+
+        musicToggle.addEventListener("click", async () => {
+            try {
+                if (music.paused) {
+                    await music.play();
+
+                    musicToggle.classList.add("playing");
+                    musicToggle.setAttribute("aria-pressed", "true");
+                    musicToggle.setAttribute("aria-label", "Pausar música");
+                    musicIcon.textContent = "❚❚";
+                    musicText.textContent = "Pausar música";
+                } else {
+                    music.pause();
+
+                    musicToggle.classList.remove("playing");
+                    musicToggle.setAttribute("aria-pressed", "false");
+                    musicToggle.setAttribute("aria-label", "Tocar música");
+                    musicIcon.textContent = "▶";
+                    musicText.textContent = "Tocar música";
+                }
+            } catch (error) {
+                console.error("Não foi possível reproduzir a música:", error);
+                musicText.textContent = "Adicione musica.mp3";
+            }
+        });
+
+        music.addEventListener("ended", () => {
+            musicToggle.classList.remove("playing");
+            musicIcon.textContent = "▶";
+            musicText.textContent = "Tocar música";
+            musicToggle.setAttribute("aria-pressed", "false");
+        });
+    </script>
+
+</body>
+</html>
