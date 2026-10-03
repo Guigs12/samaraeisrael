@@ -313,4 +313,87 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
     }
+} .music-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.music-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-width: 230px;
+    padding: 14px 24px;
+
+    border: 2px solid #c65038;
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #c65038;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.music-toggle:hover {
+    transform: scale(1.05);
+    background: #c65038;
+    color: white;
+}
+
+#musicIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    background: #c65038;
+    color: white;
+
+    font-size: 13px;
+}
+
+.music-toggle:hover #musicIcon {
+    background: white;
+    color: #c65038;
+}
+
+/* YouTube fica invisível */
+#youtubePlayer {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+
+    left: -10px;
+    top: -10px;
+
+    opacity: 0.01;
+    border: none;
+}
+
+@media (max-width: 583px) {
+
+    .music-player {
+        padding: 30px 15px;
+    }
+
+    .music-toggle {
+        width: 90%;
+        min-width: 0;
+
+        padding: 12px 18px;
+
+        font-size: 16px;
+    }
 }
